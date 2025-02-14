@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | codante.io</title>
+    <link href="./style/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body
+    class="bg-customBlack text-white flex h-screen font-dmSans justify-between"
+  >
+    <h1 hidden>Tela de login mais bonita do mundo</h1>
+    <div class="left pl-30 flex flex-col justify-center items-center">
+      <div class="row w-full mb-15 justify-between">
+        <h2 class="text-5xl font-bold">Faça seu login</h2>
+        <div class="bg-gradient-circle ml-2 mb-2 hidden md:block"></div>
+      </div>
+      <form action="" id="Main" class="flex flex-col space-y-6 w-full">
+        <div class="input flex flex-col mb-4 space-y-2">
+          <label for="email" class="font-sans text-gray-400"> <i class="fa-solid fa-envelope m-1"></i> Email</label>
+          <div
+            class="relative inline-block rounded-lg overflow-hidden p-0.5 focus-within-shadow-gradient"
+          >
+            <div
+              class="absolute inset-0 bg-transparent border-transparent rounded-lg"
+              style="
+                background: linear-gradient(45deg, #f8bc7a, #ce5fb7, #4e57ce);
+                z-index: -1;
+              "
+            ></div>
+            <input
+              type="email"
+              id="email"
+              id="email"
+              required
+              class="bg-black text-white border-0 p-2 focus:outline-none focus:ring-transparent focus:ring-offset-2 focus:ring-offset-black w-full rounded-lg box-border"
+            />
+          </div>
+        </div>
+        <div class="input flex flex-col space-y-2">
+          <label for="senha" class="text-gray-400"> <i class="fa-solid fa-lock m-1"></i> Senha </label>
+          <div
+            class="relative inline-block rounded-lg overflow-hidden p-0.5 focus-within-shadow-gradient"
+          >
+            <div
+              class="absolute inset-0 bg-transparent border-transparent rounded-lg"
+              style="
+                background: linear-gradient(45deg, #f8bc7a, #ce5fb7, #4e57ce);
+                z-index: 0;
+              "
+            ></div>
+            <input
+              type="password"
+              for="senha"
+              id="senha"
+              required
+              class="bg-black text-white border-0 p-2 focus:outline-none focus:ring-transparent focus:ring-offset-2 focus:ring-offset-black w-full rounded-lg box-border"
+              style="position: relative; z-index: 1"
+            />
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <a class="underline text-gray-400 text-sm right-0 cursor-pointer"> <i class="fa-solid fa-question underline" style="color: #868686"></i>
+            Esqueci minha senha
+          </a>
+        </div>
+        <button
+          type="submit"
+          class="bg-gradient-45deg text-white w-full py-2 rounded-lg cursor-pointer font-bold"
+        > Entrar </button>
+      </form>
+      <div class="flex mt-15">
+        <a class="underline text-gray-400 text-sm cursor-pointer">
+          Ainda não tenho uma conta <i class="fa-solid fa-person underline" style="color: #868686"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="right w-1/2 flex flex-col relative">
+      <div
+        id="toast"
+        class="hidden fixed top-5 left-1/2 -translate-x-1/2 md:right-5 md:left-auto md:-translate-x-0 bg-black text-white px-10 py-4 rounded-lg shadow-lg z-50 border border-gray-700"
+      ></div>
+
+      <img
+        src="./img/gif.gif"
+        alt="stars"
+        class="hidden md:block w-full h-full"
+      />
+    </div>
+
+    <script>
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+
+        toast.classList.remove("hidden", "animate-slide-up");
+        toast.classList.add("block", "opacity-100", "animate-slide-down");
+
+        setTimeout(() => {
+          toast.classList.replace("animate-slide-down", "animate-slide-up");
+
+          setTimeout(() => {
+            toast.classList.remove("block", "opacity-100", "animate-slide-up");
+            toast.classList.add("hidden");
+          }, 500);
+        }, 3000);
+      }
+
+      document
+        .getElementById("Main")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("email").value.trim();
+          const senha = document.getElementById("senha").value.trim();
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!email) {
+            showToast("O campo de e-mail não pode estar vazio.");
+            return;
+          }
+
+          if (!emailRegex.test(email)) {
+            showToast("Por favor, insira um e-mail válido.");
+            return;
+          }
+
+          if (!senha) {
+            showToast("O campo de senha não pode estar vazio.");
+            return;
+          }
+
+          if (senha.length < 6) {
+            showToast("A senha deve ter pelo menos 6 caracteres.");
+            return;
+          }
+
+          setTimeout(() => {
+            window.location.href = "./welcome.html";
+          }, 500);
+        });
+    </script>
+  </body>
+</html>

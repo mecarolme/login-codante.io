@@ -1,32 +1,26 @@
-# [💻 A tela de login mais bonita do mundo com Tailwind CSS](https://codante.io/mini-projetos/mp-tela-login-tailwind)
+# [ :computer: Desafio - Tela de Login com Tailwind CSS](https://codante.io/mini-projetos/mp-tela-login-tailwind)
 
-Você foi contratado por uma empresa de desenvolvimento de software para criar a tela de login mais bonita do mundo usando o framework Tailwind CSS. A empresa deseja proporcionar uma experiência visualmente agradável aos usuários ao fazerem login em seus sistemas.
+Este é um projeto desenvolvido como parte de um desafio da [codante.io]([https://codante.io/](https://codante.io/mini-projetos/mp-tela-login-tailwind)https://codante.io/). O objetivo do projeto é criar uma página de login moderna e responsiva utilizando o framework Tailwind CSS, com animações e validação de formulário em JavaScript.
 
-## 🔨 Requisitos
-- Crie uma tela de login responsiva, que se adapte a diferentes tamanhos de tela.
-- Utilize o framework Tailwind CSS para estilizar os elementos da tela de login.
-- A tela de login deve conter os seguintes elementos:
-  - Campo de entrada para o nome de usuário.
-  - Campo de entrada para a senha.
-  - Botão "Entrar" para fazer o login.
-- Implemente a validação dos campos de entrada. Caso algum campo esteja vazio, exiba uma mensagem de erro.
-- Após o usuário fazer o login com sucesso, redirecione-o para uma página de boas-vindas.
-- Capriche no design! Use sua criatividade para criar uma interface atraente e amigável, aproveitando os recursos oferecidos pelo Tailwind CSS.
+## :brain: Funcionalidades
 
-## 🔍 Dicas
-- Considere adicionar transições e animações suaves para tornar a experiência do usuário mais agradável.
-- Teste seu design em diferentes dispositivos e navegadores para garantir que ele seja responsivo e funcional em todos eles.
+* **Validação de Formulário**: Validação de campos de e-mail e senha, com mensagens de erro dinâmicas, exibidas usando animações.
+* **Animações**: Utilização de animações suaves para a exibição de mensagens de erro (toast) com transições de entrada e saída.
+* **Integração com JavaScript**: O formulário valida os campos antes de permitir o envio, com feedback imediato sobre o status dos campos.
 
-## 🎨 Design sugerido
+## :gear: Tecnologias Utilizadas
+
+* **HTML**: Estrutura semântica e acessível.
+* **Tailwind CSS**: Framework utilitário para estilização rápida e responsiva.
+* **JavaScript**: Para validação de formulários e animações de feedback.
+* **Font Awesome**: Ícones utilizados na interface.
+
+## 🎨 Design [inspiração]
+
 🔗 [Acesse o link do Figma](https://www.figma.com/file/suvmja6210ggZOO6Cpehjl/Mini-Projeto---A-tela-de-login-mais-bonita-do-mundo?type=design&node-id=0%3A1&t=pnT8xEiypSKTO4Z7-1)
 
 ![image](https://github.com/codante-io/mp-tela-login-tailwind/assets/6475893/914bc33a-ed2a-4720-bf3a-f2c2d9eb41a8)
 
-
 ## 📝 Mockups
-![Screenshot_2023-05-06_134731-removebg-preview](https://user-images.githubusercontent.com/6475893/236636789-b03715d5-7010-4e46-af97-b4a901d0fe63.png)
 
-## 💡 Inspiração
-- https://dribbble.com/shots/5792716-Login-page
-- https://dribbble.com/shots/3546598-Sign-In
-- https://www.youtube.com/watch?v=t-EMinSz_Tk
+![Screenshot_2023-05-06_134731-removebg-preview](https://user-images.githubusercontent.com/6475893/236636789-b03715d5-7010-4e46-af97-b4a901d0fe63.png)
